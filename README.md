@@ -8,7 +8,13 @@ You can easily generate a build for your own need in term of dimensions by editi
 
 ## Download
 
-Image coming soon (currently uploading)
+The image dockerhub page is [here](https://hub.docker.com/r/oelmekki/pg350d/).
+
+To pull it:
+
+```
+docker pull oelmekki/pg350d
+```
 
 
 ## Is it safe?
