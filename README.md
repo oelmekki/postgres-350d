@@ -40,3 +40,14 @@ docker pull oelmekki/pg350d
 I'll tell you that in a few months :)
 
 But patching the hardcoded limit is [the recommended way in postgres doc](https://www.postgresql.org/docs/9.5/static/cube.html#AEN169535).
+
+
+## How to raise postgresql's cube extension dimensions limit?
+
+Even if you're not familiar with docker, reading the Dockerfile from this repos
+should be easy enough to teach you how to do it yourself. Spoiler:
+
+* sources are in the `contrib/cube/` directory from postgres sources
+* limit is in `contrib/cube/cubedata.h`
+* make and make install should be ran with the `USE_PGXS=true` env variable
+
