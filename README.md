@@ -37,9 +37,14 @@ docker pull oelmekki/pg350d
 
 ## Is it safe?
 
-I'll tell you that in a few months :)
+Patching the hardcoded limit is [the recommended way in postgres doc](https://www.postgresql.org/docs/9.5/static/cube.html#AEN169535).
 
-But patching the hardcoded limit is [the recommended way in postgres doc](https://www.postgresql.org/docs/9.5/static/cube.html#AEN169535).
+I've been using it for several months on my main business, and didn't encounter any problem so far.
+
+
+## Variants
+
+If you want more than 350d and don't want to change it yourself, [@lisitsky made a 2000d variant](https://github.com/lisitsky/postgres-2kd).
 
 
 ## How to raise postgresql's cube extension dimensions limit?
