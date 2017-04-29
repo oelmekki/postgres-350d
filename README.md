@@ -31,7 +31,7 @@ The image dockerhub page is [here](https://hub.docker.com/r/oelmekki/pg350d/).
 To pull it:
 
 ```
-docker pull oelmekki/pg350d
+docker pull oelmekki/pg350d:9.6
 ```
 
 
