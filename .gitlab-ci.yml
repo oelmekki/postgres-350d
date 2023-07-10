@@ -1,0 +1,12 @@
+image: docker:latest
+services:
+- docker:dind
+
+stages:
+- test
+
+testing_image:
+  stage: test
+  script:
+    - docker build -t pg-350d .
+    - ./test.sh
