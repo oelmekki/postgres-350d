@@ -4,9 +4,19 @@ services:
 
 stages:
 - test
+- build
 
 testing_image:
   stage: test
   script:
     - docker build -t pg-350d .
     - ./test.sh
+
+upload_image:
+  stage: build
+  variables:
+    IMAGE_TAG: $CI_REGISTRY_IMAGE:15.3
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t $IMAGE_TAG .
+    - docker push $IMAGE_TAG
