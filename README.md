@@ -18,6 +18,14 @@ editing this dockerfile.
 The cube extension, which you'll use to perform operations on vectors, has
 a hard limit of 100 dimensions per vector.
 
+## Download
+
+A built image is available on Gitlab's registry. You can pull it this way:
+
+```
+docker pull registry.gitlab.com/oelmekki/postgres-350d:15.3
+```
+
 ## Is it safe?
 
 Patching the hardcoded limit is [the recommended way in postgres
